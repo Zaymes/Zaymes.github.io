@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -12,7 +11,7 @@ import Projects from '../components/projects/projects'
 import arrow from '../public/arrow-right.svg'
 import Logo from '../public/logo.png'
 import mail from '../public/mail.png'
-
+import Head from 'next/head'
 
 // border-orange-900 border-2
 
@@ -20,6 +19,11 @@ export default function Home() {
   return (
     <div>
       {/* <Header /> */}
+      <Head>
+        <title>James Shrestha</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="./computer.png" />
+      </Head>
       <div className='container mx-auto flex justify-between max-w-5xl mt-4'>
         <Link href='/'>
           <a className='hover:shadow-none text-lg text-neutral-700 flex'><Image src={Logo} height={24} width={24} style={{ marginTop: '4px' }} alt='laptopman'></Image> <p className='baseline ml-1 font-bold'>James Shrestha</p>   </a>
