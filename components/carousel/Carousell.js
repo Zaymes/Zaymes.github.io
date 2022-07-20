@@ -162,16 +162,16 @@ const Carousel = () => {
                                     className="h-full w-full aspect-square  absolute top-0 left-0 transition-opacity duration-300 opacity-80 hover:opacity-80 bg-blue-700/75 z-10 "
                                 // className='transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'
                                 >
-                                    <h3 className="text-white font-bold text-xl pt-64 mb-2 px-3 mx-auto text-xl">
+                                    <h3 className="text-white font-bold text-3xl pt-40 mb-2 px-3 mx-auto ">
                                         {resource.title}
                                         {/* IDMS - Tulsipur */}
                                     </h3>
-                                    <h3 className='text-white font-semibold text-xs mb-2 w-96 mx-auto'>
+                                    <h3 className='text-white font-semibold text-sm mb-2 w-96 mx-auto'>
                                         {resource.description}
                                     </h3>
                                     <div className='flex mx-auto max-w-max mt-2'>
-                                        <Link href=''><a className='mr-2'><Image src={github} height={24} width={24} alt='github' /></a></Link>
-                                        <Link href={resource.link} passHref><a target="_blank" ><Image src={openlink} height={24} width={24} alt='openlink' /></a></Link>
+                                        <Link href=''><a className='mr-2'><Image src={github} height={30} width={30} alt='github' className='hover:opacity-60' /></a></Link>
+                                        <Link href={resource.link} passHref><a target="_blank" ><Image src={openlink} height={30} width={30} alt='openlink' className='hover:opacity-60' /></a></Link>
                                     </div>
                                 </div>
                             </div>
