@@ -1,0 +1,46 @@
+{
+  "resources": [
+    {
+      "title": "IDMS - Tulsipur",
+      "link": "https://data.tulsipurmun.gov.np/",
+      "githubLink": "https://github.com/Zaymes",
+      "imageUrl": "/dms.png",
+      "description": "Integrated Data Management System for Tulsipur with data preview download and analysis. Built with Nextjs and tailwindcss for responsive design."
+    },
+    {
+      "title": "Website for Open Knowledge Nepal",
+      "link": "https://oknp.org",
+      "githubLink": "https://github.com/Zaymes",
+      "imageUrl": "/oknp.png",
+      "description": "Open Knowledge Nepal which is a non-profit civic-tech organization. The website is a platform for people to share their knowledge and experience."
+    },
+    {
+      "title": "Local Boundaries",
+      "link": "http://localboundries.oknp.org/",
+      "githubLink": "https://github.com/okfnepal/localboundaries",
+      "imageUrl": "/localboundaries.png",
+      "description": "Site to visualize and access the local boundaries of Nepal. It containes the data of the country provincal and municipal gesjson data."
+    },
+    {
+      "title": "IDMS - Tulsipur",
+      "link": "https://data.tulsipurmun.gov.np/",
+      "githubLink": "https://github.com/Zaymes",
+      "imageUrl": "/dms.png",
+      "description": "Integrated Data Management System for Tulsipur with data preview download and analysis. Built with Nextjs and tailwindcss for responsive design."
+    },
+    {
+      "title": "Website for Open Knowledge Nepal",
+      "link": "https://oknp.org",
+      "githubLink": "https://github.com/Zaymes",
+      "imageUrl": "/oknp.png",
+      "description": "Open Knowledge Nepal which is a non-profit civic-tech organization. The website is a platform for people to share their knowledge and experience."
+    },
+    {
+      "title": "Local Boundaries",
+      "link": "http://localboundries.oknp.org/",
+      "githubLink": "https://github.com/okfnepal/localboundaries",
+      "imageUrl": "/localboundaries.png",
+      "description": "Site to visualize and access the local boundaries of Nepal. It containes the data of the country provincal and municipal gesjson data."
+    }
+  ]
+}
