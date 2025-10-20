@@ -1,0 +1,63 @@
+# Website Content for James Shrestha
+
+## Hero / Homepage
+**Headline:** Building civic technology for open, data-driven communities  
+**Subtext:** I’m James Shrestha — an engineer and civic-tech practitioner passionate about building tools that make information accessible and governance transparent. I currently serve as Chief Operating Officer at Open Knowledge Nepal (OKN), where I work at the intersection of open data, collaboration, and digital innovation.
+
+CTA Buttons: [Explore My Work] [Read My Writing]
+
+---
+
+## About Me
+I started my journey as an Electronics and Communication Engineer, but my curiosity led me toward the world of open data and civic technology. Over the years, I’ve been part of initiatives that empower communities with better access to information — from open-data platforms to digital public tools.
+
+Currently, I work as the COO at Open Knowledge Nepal (OKN), leading operations, partnerships, and technology projects that promote open data ecosystems in Nepal. Alongside this, I contribute as a General Member of Open Internet Nepal (OIN), where we advocate for digital rights and a more open internet.
+
+My work lies at the intersection of technology, transparency, and public good — helping bridge citizens, data, and policy through meaningful design and collaboration.
+
+### Quick Highlights
+- COO, Open Knowledge Nepal  
+- General Member, Open Internet Nepal  
+- Civic-tech builder focusing on open data and public platforms  
+- Background in Electronics and Communication Engineering
+
+---
+
+## Projects / Work
+### Climate Data Portal Revamp
+Led the redesign of Nepal’s climate data portal to make open datasets more accessible via an API-driven static site. Integrated CKAN backend with modern front-end frameworks for improved usability and open data visibility.
+
+### Youth Innovation Fellowship Platform
+Developed a lightweight web platform for managing youth fellowship applications and event coordination — streamlining selection and engagement processes.
+
+### Open Data Nepal API Experiments
+Explored API-driven architecture for public datasets under OKN’s open data portal. Focused on clean access, visualization, and public use of datasets related to governance and climate.
+
+### Civic-Mapping Initiative (concept project)
+A prototype tool that uses AI-assisted mapping to identify environmental activities like tree plantations and solar installations, helping validate community-led climate actions.
+
+---
+
+## Writing / Blog
+Reflections, ideas, and lessons from working at the intersection of civic-tech, open data, and technology for social impact.
+
+### Example Blog Posts
+- **Using Open Data for Climate Action in Nepal** — How data accessibility shapes public participation and helps design better climate interventions.
+- **Building Civic-Tech Tools That Actually Get Used** — Lessons learned from developing open platforms for real-world adoption.
+
+---
+
+## Contact
+Let’s Connect or Collaborate  
+I’m always open to conversations around civic-tech, open data, and innovation in public digital infrastructure. If you’re working on something aligned — let’s talk!
+
+Email: your.email@example.com  
+LinkedIn: your-linkedin  
+Twitter/X: your-twitter  
+GitHub: your-github
+
+---
+
+## Footer
+Built with curiosity, open data, and too much coffee ☕  
+© 2025 James Shrestha
