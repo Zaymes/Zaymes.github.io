@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "update-content": "node scripts/update-content.js"
+    "update-content": "node scripts/update-content.js",
+    "deploy": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "next": "14.2.33",
