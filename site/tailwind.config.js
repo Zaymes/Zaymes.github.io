@@ -4,8 +4,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+        'serif': ['var(--font-montserrat)', 'serif'],
+      },
       backgroundImage: {
         "about-bg": "url('../public/james.jpeg')",
       },

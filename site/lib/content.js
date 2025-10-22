@@ -1,8 +1,8 @@
 // Content management for easy editing
 export const siteConfig = {
   name: "James Shrestha",
-  title: "Building civic technology for open, data-driven communities",
-  description: "I'm James Shrestha — an engineer and civic-tech practitioner passionate about building tools that make information accessible and governance transparent.",
+  title: "Applied Researcher & Builder — Creating data products for civic impact",
+  description: "I'm James Shrestha — an applied researcher and builder focused on designing data-driven systems and civic technologies that make public information more accessible and actionable.",
   url: "https://james-shrestha.com",
   ogImage: "/og-image.jpg",
   links: {
@@ -14,64 +14,64 @@ export const siteConfig = {
 }
 
 export const heroContent = {
-  headline: "Building civic technology for open, data-driven communities",
-  subtext: "I'm James Shrestha — an engineer and civic-tech practitioner passionate about building tools that make information accessible and governance transparent. I currently serve as Chief Operating Officer at Open Knowledge Nepal (OKN), where I work at the intersection of open data, collaboration, and digital innovation.",
+  headline: "Building data-driven systems for public good",
+  subtext: "I'm James Shrestha — an applied researcher and builder working at the intersection of technology, open data, and civic innovation. Currently serving as Chief Operating Officer at Open Knowledge Nepal (OKN), I focus on translating research and ideas into practical digital tools that enable transparency and participation.",
   ctaButtons: [
-    { text: "Explore My Work", href: "#projects" },
-    { text: "Read My Writing", href: "#blog" }
+    { text: "View My Work", href: "#projects" },
+    { text: "Explore My Writings", href: "#blog" }
   ]
 }
 
 export const aboutContent = {
   title: "About Me",
-  description: "I started my journey as an Electronics and Communication Engineer, but my curiosity led me toward the world of open data and civic technology. Over the years, I've been part of initiatives that empower communities with better access to information — from open-data platforms to digital public tools.",
-  currentRole: "Currently, I work as the COO at Open Knowledge Nepal (OKN), leading operations, partnerships, and technology projects that promote open data ecosystems in Nepal. Alongside this, I contribute as a General Member of Open Internet Nepal (OIN), where we advocate for digital rights and a more open internet.",
-  mission: "My work lies at the intersection of technology, transparency, and public good — helping bridge citizens, data, and policy through meaningful design and collaboration.",
+  description: "My background in Electronics and Communication Engineering gradually evolved into a practice of designing data and digital products for civic and public use. Over the years, I’ve led initiatives and experiments that bring together open data, user-centered design, and digital collaboration — aiming to make governance more transparent and communities more informed.",
+  currentRole: "Currently, I work as the COO at Open Knowledge Nepal (OKN), where I lead operations, partnerships, and technology projects that strengthen Nepal’s open data ecosystem. I also serve as a General Member at Open Internet Nepal (OIN), contributing to advocacy for an open and inclusive digital space. Previously, I’ve coordinated and led data-focused fellowship programs and community events under OKN.",
+  mission: "I operate at the intersection of research, implementation, and impact — bridging technology, data, and social systems through applied experimentation and collaborative development.",
   highlights: [
-    "COO, Open Knowledge Nepal",
-    "General Member, Open Internet Nepal", 
-    "Civic-tech builder focusing on open data and public platforms",
+    "COO, Open Knowledge Nepal — leading civic-tech and data innovation",
+    "General Member, Open Internet Nepal — advocating open internet and digital rights",
+    "Builder of data platforms and public digital products",
     "Background in Electronics and Communication Engineering"
   ],
   technologies: [
-    "JavaScript ES6+",
+    "JavaScript (ES6+)",
     "Python",
     "React.js",
     "Next.js",
     "Django",
-    "HTML & CSS",
     "Node.js",
-    "PostgreSQL"
+    "PostgreSQL",
+    "Data Visualization"
   ]
 }
 
 export const projectsContent = {
-  title: "Projects & Work",
+  title: "Selected Projects",
   projects: [
     {
-      title: "Climate Data Portal Revamp",
-      description: "Led the redesign of Nepal's climate data portal to make open datasets more accessible via an API-driven static site. Integrated CKAN backend with modern front-end frameworks for improved usability and open data visibility.",
-      technologies: ["Next.js", "CKAN", "API", "Data Visualization"],
-      github: "https://github.com/your-username/climate-portal",
-      live: "https://climate-data-nepal.org"
-    },
-    {
-      title: "Youth Innovation Fellowship Platform",
-      description: "Developed a lightweight web platform for managing youth fellowship applications and event coordination — streamlining selection and engagement processes.",
-      technologies: ["Django", "PostgreSQL", "React", "Bootstrap"],
-      github: "https://github.com/your-username/fellowship-platform",
-      live: "https://fellowship.okn.org.np"
-    },
-    {
-      title: "Open Data Nepal API Experiments",
-      description: "Explored API-driven architecture for public datasets under OKN's open data portal. Focused on clean access, visualization, and public use of datasets related to governance and climate.",
+      title: "Open Data Nepal",
+      description: "Prototyped API-based access layers for OKN’s open data portal. Explored scalable data delivery and visualization mechanisms to encourage open data use in governance and research.",
       technologies: ["Python", "FastAPI", "PostgreSQL", "Docker"],
       github: "https://github.com/your-username/open-data-api",
-      live: "https://api.opendatanepal.com"
+      live: "https://opendatanepal.com"
+    },
+    {
+      title: "Integrated Data Management System",
+      description: "IDMS is a comprehensive, integrated, and interoperable digital system designed to facilitate seamless inter-governmental data sharing and efficient dissemination of valuable data in the public domain under FAIR principles. IDMS ensures the findability, accessibility, interoperability, and reusability of data, providing a robust framework for secure and transparent data management.",
+      technologies: ["CKAN", "GraphQL", "PostgreSQL", "Docker", "Next.js", "Tailwind CSS", "TypeScript"],
+      github: "",
+      live: "https://idms.oknp.org/"
+    },
+    {
+      title: "Climate Data Portal",
+      description: "Designed and developed Nepal’s climate data portal into a more accessible, API-first platform. Focused on usability, data interoperability, and public access — turning complex datasets into usable public assets.",
+      technologies: ["Next.js", "CKAN", "API", "Data Visualization"],
+      github: "https://github.com/openknowledgenp/climate",
+      live: "https://climate.oknp.org/"
     },
     {
       title: "Civic-Mapping Initiative",
-      description: "A prototype tool that uses AI-assisted mapping to identify environmental activities like tree plantations and solar installations, helping validate community-led climate actions.",
+      description: "Developed an experimental AI-assisted mapping tool to identify and validate environmental activities such as tree plantations and solar panel installations — enhancing transparency in community-led climate actions.",
       technologies: ["Python", "OpenCV", "Machine Learning", "GIS"],
       github: "https://github.com/your-username/civic-mapping",
       live: "https://civic-mapping.okn.org.np"
@@ -80,36 +80,36 @@ export const projectsContent = {
 }
 
 export const blogContent = {
-  title: "Writing & Blog",
-  description: "Reflections, ideas, and lessons from working at the intersection of civic-tech, open data, and technology for social impact.",
+  title: "Writings & Reflections",
+  description: "Explorations, learnings, and reflections from building civic and data technologies — focusing on how open systems, research, and design come together to create public value.",
   posts: [
     {
-      title: "Using Open Data for Climate Action in Nepal",
-      excerpt: "How data accessibility shapes public participation and helps design better climate interventions.",
-      date: "2024-01-15",
-      slug: "open-data-climate-action-nepal",
-      readTime: "5 min read"
+      title: "Rethinking Data Products for Public Use",
+      excerpt: "How civic data tools can evolve from prototypes into products that drive measurable impact.",
+      date: "2025-02-10",
+      slug: "rethinking-data-products",
+      readTime: "6 min read"
     },
     {
       title: "Building Civic-Tech Tools That Actually Get Used",
-      excerpt: "Lessons learned from developing open platforms for real-world adoption.",
-      date: "2024-01-10",
+      excerpt: "Practical insights from iterating open data platforms and understanding user adoption challenges.",
+      date: "2024-12-18",
       slug: "building-civic-tech-tools",
       readTime: "7 min read"
     },
     {
-      title: "The Future of Open Data in Nepal",
-      excerpt: "Exploring opportunities and challenges in Nepal's open data ecosystem.",
-      date: "2024-01-05",
-      slug: "future-open-data-nepal",
-      readTime: "6 min read"
+      title: "Experimentation as a Pathway to Innovation",
+      excerpt: "Why continuous experimentation and learning cycles are crucial in civic and data-driven product development.",
+      date: "2024-11-05",
+      slug: "experimentation-pathway-to-innovation",
+      readTime: "5 min read"
     }
   ]
 }
 
 export const contactContent = {
-  title: "Let's Connect or Collaborate",
-  description: "I'm always open to conversations around civic-tech, open data, and innovation in public digital infrastructure. If you're working on something aligned — let's talk!",
+  title: "Connect or Collaborate",
+  description: "Open to collaborations and conversations around civic technology, data products, and digital public infrastructure. If you're building or researching something aligned — I’d love to connect.",
   email: "zaymesshrestha@gmail.com",
   social: {
     linkedin: "https://www.linkedin.com/in/james-shrestha-25549a189",

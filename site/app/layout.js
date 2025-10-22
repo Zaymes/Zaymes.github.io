@@ -1,7 +1,19 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { DM_Sans, Montserrat } from 'next/font/google'
+import { ThemeProvider } from '../lib/theme-context'
 
-const inter = Inter({ subsets: ['latin'] })
+const dmSans = DM_Sans({ 
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap'
+})
+
+const montserrat = Montserrat({ 
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-montserrat',
+  display: 'swap'
+})
 
 export const metadata = {
   title: 'James Shrestha - Civic Tech Engineer',
@@ -24,8 +36,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
-        {children}
+      <body className={`${dmSans.variable} ${montserrat.variable} font-sans antialiased`}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
