@@ -57,7 +57,20 @@
   
   /* Button Styles */
   .btn-primary {
-    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-900 transition-all duration-200;
+    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all duration-200;
+    background-color: #06B6D4;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0891B2;
+  }
+  
+  .dark .btn-primary {
+    background-color: #06B6D4;
+  }
+  
+  .dark .btn-primary:hover {
+    background-color: #0891B2;
   }
   
   .btn-secondary {

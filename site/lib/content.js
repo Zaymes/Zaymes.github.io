@@ -24,8 +24,8 @@ export const heroContent = {
 
 export const aboutContent = {
   title: "About Me",
-  description: "My background in Electronics and Communication Engineering gradually evolved into a practice of designing data and digital products for civic and public use. Over the years, I’ve led initiatives and experiments that bring together open data, user-centered design, and digital collaboration — aiming to make governance more transparent and communities more informed.",
-  currentRole: "Currently, I work as the COO at Open Knowledge Nepal (OKN), where I lead operations, partnerships, and technology projects that strengthen Nepal’s open data ecosystem. I also serve as a General Member at Open Internet Nepal (OIN), contributing to advocacy for an open and inclusive digital space. Previously, I’ve coordinated and led data-focused fellowship programs and community events under OKN.",
+  description: "My background in Electronics and Communication Engineering gradually evolved into a practice of designing data and digital products for civic and public use. Over the years, I've led initiatives and experiments that bring together open data, user-centered design, and digital collaboration — aiming to make governance more transparent and communities more informed.",
+  currentRole: "Currently, I work as the COO at Open Knowledge Nepal (OKN), where I lead operations, partnerships, and technology projects that strengthen Nepal's open data ecosystem. I also serve as a General Member at Open Internet Nepal (OIN), contributing to advocacy for an open and inclusive digital space. Previously, I've coordinated and led data-focused fellowship programs and community events under OKN.",
   mission: "I operate at the intersection of research, implementation, and impact — bridging technology, data, and social systems through applied experimentation and collaborative development.",
   highlights: [
     "COO, Open Knowledge Nepal — leading civic-tech and data innovation",
@@ -42,7 +42,71 @@ export const aboutContent = {
     "Node.js",
     "PostgreSQL",
     "Data Visualization"
-  ]
+  ],
+  // Journey Visualization Data
+  // Edit this section to update the visual representation of your multidisciplinary journey
+  // Structure: education, organizations, domains (work areas), and connections between them
+  journey: {
+    center: {
+      title: "James Shrestha",
+      subtitle: "Civic Tech Engineer"
+    },
+    education: [
+      {
+        title: "Electronics & Communication Engineering",
+        year: "2021",
+        icon: "🎓"
+      }
+    ],
+    organizations: [
+      {
+        name: "Open Knowledge Nepal",
+        role: "Chief Operating Officer",
+        period: "2021 - Present",
+        focus: ["Open Data", "Civic Tech", "Technology Projects"],
+        icon: "🌐"
+      },
+      {
+        name: "Open Internet Nepal",
+        role: "General Member",
+        period: "Present",
+        focus: ["Digital Rights", "Internet Advocacy"],
+        icon: "🔗"
+      }
+    ],
+    domains: [
+      {
+        name: "Technology",
+        skills: ["Full-Stack Development", "API Design", "Data Systems"],
+        color: "blue"
+      },
+      {
+        name: "Innovation",
+        skills: ["Product Design", "Open Data Platforms", "Digital Solutions"],
+        color: "purple"
+      },
+      {
+        name: "Social Impact",
+        skills: ["Civic Engagement", "Transparency", "Public Good"],
+        color: "green"
+      },
+      {
+        name: "Community",
+        skills: ["Fellowship Programs", "Events", "Collaboration"],
+        color: "orange"
+      }
+    ],
+    connections: [
+      { from: "education", to: "Technology", type: "foundation" },
+      { from: "Open Knowledge Nepal", to: "Technology", type: "direct" },
+      { from: "Open Knowledge Nepal", to: "Innovation", type: "direct" },
+      { from: "Open Knowledge Nepal", to: "Social Impact", type: "direct" },
+      { from: "Open Internet Nepal", to: "Social Impact", type: "direct" },
+      { from: "Technology", to: "Innovation", type: "enables" },
+      { from: "Innovation", to: "Social Impact", type: "enables" },
+      { from: "Social Impact", to: "Community", type: "nurtures" }
+    ]
+  }
 }
 
 export const projectsContent = {
