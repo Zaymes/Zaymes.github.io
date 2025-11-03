@@ -477,7 +477,7 @@ function AboutSection() {
               My background in Electronics and Communication Engineering gradually evolved into designing data and digital products for civic use.
             </p>
             <p className="text-body leading-relaxed">
-              Over the years, I've led initiatives and experiments that bring together open data, user-centered design, and digital collaboration — aiming to make governance more transparent and communities more informed.
+              Over the years, I&apos;ve led initiatives and experiments that bring together open data, user-centered design, and digital collaboration — aiming to make governance more transparent and communities more informed.
             </p>
             <p className="text-body leading-relaxed">
               I operate at the intersection of research, implementation, and impact — bridging technology, data, and social systems through applied experimentation and collaborative development.
