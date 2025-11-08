@@ -14,8 +14,9 @@ export const siteConfig = {
 }
 
 export const heroContent = {
-  headline: "Building data-driven systems for public good",
-  subtext: "I'm James Shrestha — an applied researcher and builder working at the intersection of technology, open data, and civic innovation. Currently serving as Chief Operating Officer at Open Knowledge Nepal (OKN), I focus on translating research and ideas into practical digital tools that enable transparency and participation.",
+  headline: "Building, advocating, and experimenting at the intersection of technology, data, and design",
+  // Ensure explicit <br/> for line breaking in rendering with HTML/JSX tags
+  subtext: `I’m James Shrestha — an engineer turned applied researcher and builder, exploring how technology, data, and design shape our collective future. Currently pursuing experiments in emerging tech, community building, advocacy, and hands-on tinkering.`,
   ctaButtons: [
     { text: "View My Work", href: "#projects" },
     { text: "Explore My Writings", href: "#blog" }
@@ -113,39 +114,51 @@ export const projectsContent = {
   title: "Selected Projects",
   projects: [
     {
-      title: "Open Data Nepal",
-      description: "Prototyped API-based access layers for OKN’s open data portal. Explored scalable data delivery and visualization mechanisms to encourage open data use in governance and research.",
-      technologies: ["Python", "FastAPI", "PostgreSQL", "Docker"],
-      github: "https://github.com/your-username/open-data-api",
-      live: "https://opendatanepal.com"
-    },
-    {
       title: "Integrated Data Management System",
-      description: "IDMS is a comprehensive, integrated, and interoperable digital system designed to facilitate seamless inter-governmental data sharing and efficient dissemination of valuable data in the public domain under FAIR principles. IDMS ensures the findability, accessibility, interoperability, and reusability of data, providing a robust framework for secure and transparent data management.",
+      quickContext: "A comprehensive, interoperable digital system facilitating seamless inter-governmental data sharing under FAIR principles.",
+      description: "IDMS enables secure and transparent data management across government agencies, ensuring findability, accessibility, interoperability, and reusability of public data. The platform supports data discovery, sharing workflows, and public dissemination.",
+      role: "Involved in product design and data architecture; developed the frontend interface and API integrations; coordinated with stakeholders for requirements gathering and system deployment.",
       technologies: ["CKAN", "GraphQL", "PostgreSQL", "Docker", "Next.js", "Tailwind CSS", "TypeScript"],
+      outcome: "Deployed across five local governments in Nepal; processed 500+ datasets; recognized as Civic Tech Product under Goverance Track by UNDP 2025 and nominated for ICT Awards 2025.",
       github: "",
       live: "https://idms.oknp.org/"
     },
     {
       title: "Climate Data Portal",
-      description: "Designed and developed Nepal’s climate data portal into a more accessible, API-first platform. Focused on usability, data interoperability, and public access — turning complex datasets into usable public assets.",
-      technologies: ["Next.js", "CKAN", "API", "Data Visualization"],
+      quickContext: "Nepal's climate data portal redesigned as an accessible, API-first platform for public climate information.",
+      description: "Transformed complex climate datasets into an accessible public resource. The platform provides API access, interactive visualizations, and data downloads to support research, policy-making, and public awareness around climate change in Nepal.",
+      role: "Designed and developed the frontend architecture; built API integration layer; created data visualization components; led user experience improvements.",
+      technologies: ["Next.js", "CKAN", "REST API", "Data Visualization", "Mapbox"],
+      outcome: "Improved access to climate and environmental datasets and supported their use by researchers and policy groups in Nepal.",
       github: "https://github.com/openknowledgenp/climate",
       live: "https://climate.oknp.org/"
     },
     {
-      title: "Civic-Mapping Initiative",
-      description: "Developed an experimental AI-assisted mapping tool to identify and validate environmental activities such as tree plantations and solar panel installations — enhancing transparency in community-led climate actions.",
-      technologies: ["Python", "OpenCV", "Machine Learning", "GIS"],
-      github: "https://github.com/your-username/civic-mapping",
-      live: "https://civic-mapping.okn.org.np"
+      title: "Open Data Nepal Portal",
+      quickContext: "API-based access layers for Nepal’s open data ecosystem, enabling scalable data delivery, visualization, and interactive insights.",
+      description: "Prototyped and developed core components of Nepal’s open data portal, including frontend interfaces, data discovery features, and interactive visualizations. Conceived and led the design of the Data Stories feature to make datasets more meaningful and accessible for users. Contributed to backend API development and collaborated on data pipeline optimization to ensure smooth delivery of open datasets.",
+      role: "Led the design and implementation of key frontend components for data access, visualization, and discovery, while contributing to backend API endpoints and integrations. I also conceptualized and drove the development of the Data Stories feature, working closely with the team to ensure a seamless user experience and effective data presentation.",
+      technologies: ["Python", "FastAPI", "CKAN", "Next.js", "Docker", "Tailwind CSS", "TypeScript", "Solr", "tRPC"],
+      outcome: "The portal enhanced access to open datasets and improved usability for researchers, civic groups, and other users, providing a foundation for continued experimentation and engagement with Nepal’s open data ecosystem",
+      github: "https://github.com/openknowledgenp/opendatanepal",
+      live: "https://opendatanepal.com"
+    },
+    {
+      title: "LG Profile Viewer",
+      quickContext: "Interactive data visualization dashboard for Tulsipur Sub-Metropolitan City, designed to make local government data more accessible, understandable, and actionable for stakeholders.",
+      description: "Developed a dashboard that aggregates, visualizes, and presents key municipal datasets for Tulsipur Sub-Metropolitan City. The platform allows city officials, researchers, and citizens to explore demographic, environmental, and service-related data through interactive charts, maps, and insights, fostering transparency and evidence-based decision-making.",
+      role: "Led the design and development of the frontend dashboard, implementing interactive visualizations and user-friendly interfaces to make complex datasets accessible. I collaborated with local government teams to understand data requirements, customized backend integration where necessary, and ensured smooth functionality of data pipelines.",
+      technologies: ["react", "Leaflet", "GIS", "HighCharts.js"],
+      outcome: "The dashboard provides city officials, researchers, and citizens with an accessible view of municipal data, enabling better planning and data-driven decision-making at the local level. It serves as a scalable model for future data visualization initiatives in other municipalities.",
+      github: "",
+      live: "https://data.tulsipurmun.gov.np/profile"
     }
   ]
 }
 
 export const blogContent = {
   title: "Writings & Reflections",
-  description: "Explorations, learnings, and reflections from building civic and data technologies — focusing on how open systems, research, and design come together to create public value.",
+  description: "Explorations, learnings, and reflections from building, thinking and doing, contains lot of opioniated content at writing time that may not be aligned with my current views.",
   posts: [
     {
       title: "Rethinking Data Products for Public Use",

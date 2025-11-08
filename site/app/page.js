@@ -49,7 +49,7 @@ function BillboardScreen({ cards }) {
       transition={{ duration: 0.6 }}
       className="relative w-full"
     >
-      <div className="relative bg-white dark:bg-gray-900 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-800">
+      <div className="relative bg-white dark:bg-gray-900 rounded-xl p-5 shadow-md border border-gray-200/80 dark:border-gray-800/80 backdrop-blur-sm">
         <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-200 dark:border-gray-800">
           <span className="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wide uppercase">
             Current Updates
@@ -114,7 +114,7 @@ function BillboardScreen({ cards }) {
                   ? 'w-6'
                   : 'w-1.5 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'
               }`}
-              style={index === currentIndex ? { backgroundColor: '#95D6DF' } : {}}
+              style={index === currentIndex ? { backgroundColor: '#0891B2' } : {}}
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
             />
@@ -161,7 +161,7 @@ function HeroSection() {
   ]
 
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-gray-50 via-cyan-50 to-sky-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-800">
+    <section className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-cyan-50 via-sky-100 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-800">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Text Content */}
@@ -170,19 +170,29 @@ function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="heading-primary mb-6 text-balance"
-            >
-              {heroContent.headline}
-            </motion.h1>
+            <div className="mb-6">
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-3 leading-tight"
+              >
+                Building, advocating, and experimenting
+              </motion.h1>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.15 }}
+                className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 dark:text-gray-400 leading-tight"
+              >
+                at the intersection of technology, data, and design
+              </motion.h2>
+            </div>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="text-body mb-8 text-balance leading-relaxed"
             >
               {heroContent.subtext}
@@ -198,7 +208,7 @@ function HeroSection() {
                 <Link 
                   key={index} 
                   href={button.href}
-                  className={index === 0 ? 'btn-primary' : 'btn-glass'}
+                  className={index === 0 ? 'btn-primary' : 'btn-secondary'}
                 >
                   {button.text}
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -207,36 +217,16 @@ function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* Billboard Display with Vibrant Background */}
+          {/* Billboard Display - Clean and Matched */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            {/* Clean Vibrant Background Glow - Sharp variants of #95D6DF */}
-            <div className="absolute inset-0 -m-4 rounded-2xl blur-2xl" style={{
-              background: 'linear-gradient(135deg, rgba(149, 214, 223, 0.3), rgba(180, 228, 235, 0.2), rgba(123, 197, 208, 0.25))'
-            }}></div>
-            <motion.div
-              className="absolute inset-0 -m-4 rounded-2xl"
-              animate={{
-                background: [
-                  `radial-gradient(circle at 30% 50%, rgba(149, 214, 223, 0.35), transparent 60%)`,
-                  `radial-gradient(circle at 70% 50%, rgba(180, 228, 235, 0.3), transparent 60%)`,
-                  `radial-gradient(circle at 50% 30%, rgba(123, 197, 208, 0.35), transparent 60%)`,
-                  `radial-gradient(circle at 30% 50%, rgba(149, 214, 223, 0.35), transparent 60%)`,
-                ],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-            />
-            {/* Clean decorative gradient border - sharp cyan variants */}
-            <div className="absolute -inset-1 rounded-2xl opacity-25 dark:opacity-15 blur-sm" style={{
-              background: 'linear-gradient(to right, #B4E4EB, #95D6DF, #7BC5D0)'
+            {/* Subtle Background Glow */}
+            <div className="absolute inset-0 -m-2 rounded-xl blur-xl opacity-40" style={{
+              background: 'radial-gradient(circle at center, rgba(8, 145, 178, 0.15), transparent 70%)'
             }}></div>
             
             {/* Billboard Container */}
@@ -254,129 +244,66 @@ function HeroSection() {
 function Navigation() {
   const { theme, toggleTheme } = useTheme()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className={`transition-all duration-300 ${
-        isScrolled 
-          ? 'navbar-glass-scrolled' 
-          : 'navbar-glass-transparent'
-      }`}>
-        <div className="container-custom">
-          <div className="flex justify-between items-center py-4">
+    <nav className="sticky top-0 z-50 navbar-minimal">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-3">
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-              <span className="text-white font-bold text-sm">JS</span>
-            </div>
-            <span className={`font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors ${
-              isScrolled 
-                ? 'text-gray-900 dark:text-gray-100' 
-                : 'text-gray-900 dark:text-gray-100'
-            }`}>
+            <span className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
               James Shrestha
             </span>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            <Link href="#about" className={`hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium ${
-              isScrolled 
-                ? 'text-gray-600 dark:text-gray-300' 
-                : 'text-gray-600 dark:text-gray-300'
-            }`}>
+          <div className="hidden md:flex items-center space-x-6">
+            <Link href="#about" className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
-            <Link href="#projects" className={`hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium ${
-              isScrolled 
-                ? 'text-gray-600 dark:text-gray-300' 
-                : 'text-gray-600 dark:text-gray-300'
-            }`}>
+            <Link href="#projects" className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium">
               Projects
             </Link>
-            <Link href="#blog" className={`hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium ${
-              isScrolled 
-                ? 'text-gray-600 dark:text-gray-300' 
-                : 'text-gray-600 dark:text-gray-300'
-            }`}>
+            <Link href="#blog" className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium">
               Writing
             </Link>
-            <Link href="#contact" className={`hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium ${
-              isScrolled 
-                ? 'text-gray-600 dark:text-gray-300' 
-                : 'text-gray-600 dark:text-gray-300'
-            }`}>
+            <Link href="#contact" className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className={`p-2 rounded-lg transition-all duration-200 ${
-                isScrolled 
-                  ? 'bg-white/10 dark:bg-gray-800/20 hover:bg-white/20 dark:hover:bg-gray-700/30 border border-white/20 dark:border-gray-600/30 backdrop-blur-sm' 
-                  : 'bg-white/20 dark:bg-gray-800/30 hover:bg-white/30 dark:hover:bg-gray-700/40 border border-white/30 dark:border-gray-600/40 backdrop-blur-sm'
-              }`}
+              className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"
               aria-label="Toggle theme"
               title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
               {theme === 'light' ? (
-                <Moon className={`h-5 w-5 ${
-                  isScrolled 
-                    ? 'text-gray-600 dark:text-gray-300' 
-                    : 'text-white dark:text-gray-300'
-                }`} />
+                <Moon className="h-4 w-4" />
               ) : (
-                <Sun className={`h-5 w-5 ${
-                  isScrolled 
-                    ? 'text-gray-600 dark:text-gray-300' 
-                    : 'text-white dark:text-gray-300'
-                }`} />
+                <Sun className="h-4 w-4" />
               )}
             </button>
             
-            <Link href="/" target="_blank" className={`text-sm hidden sm:inline-flex px-4 py-2 rounded-lg transition-all duration-200 ${
-              isScrolled 
-                ? 'bg-white/10 dark:bg-gray-800/20 hover:bg-white/20 dark:hover:bg-gray-700/30 border border-white/20 dark:border-gray-600/30 backdrop-blur-sm text-gray-700 dark:text-gray-200' 
-                : 'bg-white/20 dark:bg-gray-800/30 hover:bg-white/30 dark:hover:bg-gray-700/40 border border-white/30 dark:border-gray-600/40 backdrop-blur-sm text-gray-700 dark:text-gray-200'
-            }`}>
-              Download CV
+            <Link 
+              href={contactContent.social.linkedin} 
+              target="_blank" 
+              className="text-sm hidden sm:inline-flex px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 transition-colors font-medium"
+            >
+              Connect
             </Link>
             
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 rounded-lg transition-all duration-200 ${
-                isScrolled 
-                  ? 'bg-white/10 dark:bg-gray-800/20 hover:bg-white/20 dark:hover:bg-gray-700/30 border border-white/20 dark:border-gray-600/30 backdrop-blur-sm' 
-                  : 'bg-white/20 dark:bg-gray-800/30 hover:bg-white/30 dark:hover:bg-gray-700/40 border border-white/30 dark:border-gray-600/40 backdrop-blur-sm'
-              }`}
+              className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
-                <X className={`h-5 w-5 ${
-                  isScrolled 
-                    ? 'text-gray-600 dark:text-gray-300' 
-                    : 'text-white dark:text-gray-300'
-                }`} />
+                <X className="h-5 w-5" />
               ) : (
-                <Menu className={`h-5 w-5 ${
-                  isScrolled 
-                    ? 'text-gray-600 dark:text-gray-300' 
-                    : 'text-white dark:text-gray-300'
-                }`} />
+                <Menu className="h-5 w-5" />
               )}
             </button>
           </div>
@@ -388,49 +315,48 @@ function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-gray-200/20 dark:border-gray-700/20"
+            className="md:hidden border-t border-gray-200 dark:border-gray-800"
           >
-            <div className="py-4 space-y-4">
+            <div className="py-4 space-y-3">
               <Link 
                 href="#about" 
-                className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                className="block text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link 
                 href="#projects" 
-                className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                className="block text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Projects
               </Link>
               <Link 
                 href="#blog" 
-                className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                className="block text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Writing
               </Link>
               <Link 
                 href="#contact" 
-                className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                className="block text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link 
-                href="/" 
+                href={contactContent.social.linkedin} 
                 target="_blank" 
-                className="btn-glass text-sm inline-flex"
+                className="inline-flex text-sm px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Download CV
+                Connect
               </Link>
             </div>
           </motion.div>
         )}
-        </div>
       </div>
     </nav>
   )
@@ -445,8 +371,8 @@ function AboutSection() {
       subtitle: org.name,
       period: org.period
     })),
-    { title: "Builder of data platforms", subtitle: "Public Digital Products", period: "Ongoing" },
-    { title: "Community Fellowship Lead", subtitle: "Data-focused Programs", period: "Past & Present" }
+    // { title: "Builder of data platforms", subtitle: "Public Digital Products", period: "Ongoing" },
+    // { title: "Community Fellowship Lead", subtitle: "Data-focused Programs", period: "Past & Present" }
   ]
 
   const skillsChips = [
@@ -472,15 +398,18 @@ function AboutSection() {
           </h2>
 
           {/* Short Story Paragraphs */}
-          <div className="mb-10 space-y-6">
+          <div className="mb-10 space-y-6 text-justify">
             <p className="text-body leading-relaxed">
-              My background in Electronics and Communication Engineering gradually evolved into designing data and digital products for civic use.
+            My journey began in Electronics and Communication Engineering, but curiosity soon pulled me beyond circuits and code, into how data, design, and collaboration can drive systems change.
             </p>
             <p className="text-body leading-relaxed">
-              Over the years, I&apos;ve led initiatives and experiments that bring together open data, user-centered design, and digital collaboration — aiming to make governance more transparent and communities more informed.
+            Over the years, I’ve worked across open data, digital governance, and civic innovation, leading initiatives that translate research into practical digital tools. Many of these efforts aim to make public systems more transparent, participatory, and adaptive.
             </p>
             <p className="text-body leading-relaxed">
-              I operate at the intersection of research, implementation, and impact — bridging technology, data, and social systems through applied experimentation and collaborative development.
+            Today, I see my work as an evolving practice of building, advocating, and experimenting at the intersection of technology, community, and emerging systems. Whether designing open platforms, exploring the possibilities of AI and decentralized technologies, or helping communities use data more effectively, I’m guided by a simple belief: tools can shape how people understand, organize, and act together.
+            </p>
+            <p className="text-body leading-relaxed">
+            I operate at the intersection of research, implementation, and impact, bridging ideas and practice through applied experimentation and collaborative development, always learning, always building.
             </p>
           </div>
 
@@ -493,7 +422,7 @@ function AboutSection() {
             className="mb-10 relative"
           >
             {/* Timeline Line */}
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 hidden md:block"></div>
+            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-cyan-500 dark:from-blue-400 dark:to-purple-400 hidden md:block"></div>
             
             <div className="space-y-6">
               {roleCards.map((role, index) => (
@@ -506,7 +435,7 @@ function AboutSection() {
                   className="relative flex items-start gap-4"
                 >
                   {/* Timeline Dot */}
-                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 dark:from-blue-400 dark:to-purple-400 border-4 border-white dark:border-gray-900 shadow-lg hidden md:flex items-center justify-center">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-sky-50 dark:from-blue-400 dark:to-purple-400 border-4 border-white dark:border-gray-900 shadow-lg hidden md:flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-white dark:bg-gray-900"></div>
                   </div>
                   
@@ -568,6 +497,8 @@ function AboutSection() {
 
 // Projects Section Component
 function ProjectsSection() {
+  const [expandedProject, setExpandedProject] = useState(null)
+
   return (
     <section id="projects" className="section-padding bg-gray-50 dark:bg-gray-800">
       <div className="container-custom">
@@ -584,42 +515,109 @@ function ProjectsSection() {
         </motion.div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {projectsContent.projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="card-glass group"
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <div className="flex space-x-2">
-                  <Link href={project.github} target="_blank" className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                    <Github className="h-5 w-5" />
-                  </Link>
-                  <Link href={project.live} target="_blank" className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                    <ExternalLink className="h-5 w-5" />
-                  </Link>
+          {projectsContent.projects.map((project, index) => {
+            const isExpanded = expandedProject === index
+            
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="card-glass group"
+              >
+                {/* Header */}
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors mb-2">
+                      {project.title}
+                    </h3>
+                    {project.quickContext && (
+                      <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                        {project.quickContext}
+                      </p>
+                    )}
+                  </div>
+                  <div className="flex space-x-2 ml-4">
+                    {project.github && (
+                      <Link href={project.github} target="_blank" className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                        <Github className="h-5 w-5" />
+                      </Link>
+                    )}
+                    {project.live && (
+                      <Link href={project.live} target="_blank" className="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                        <ExternalLink className="h-5 w-5" />
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-              
-              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                {project.description}
-              </p>
-              
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="tech-tag text-xs">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                
+                {/* Short Description */}
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                
+                {/* Expand/Collapse Button */}
+                <button
+                  onClick={() => setExpandedProject(isExpanded ? null : index)}
+                  className="flex items-center gap-2 text-sm text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors mb-4"
+                >
+                  <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
+                  <ArrowRight className={`h-4 w-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                </button>
+                
+                {/* Expanded Detail View */}
+                <AnimatePresence>
+                  {isExpanded && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 border-t border-gray-200 dark:border-gray-700 space-y-4">
+                        {/* Role / Involvement */}
+                        {project.role && (
+                          <div>
+                            <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">My Role</h4>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                              {project.role}
+                            </p>
+                          </div>
+                        )}
+                        
+                        {/* Tech / Tools */}
+                        {project.technologies && project.technologies.length > 0 && (
+                          <div>
+                            <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Tech / Tools</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {project.technologies.map((tech, techIndex) => (
+                                <span key={techIndex} className="px-3 py-1 bg-cyan-50 dark:bg-cyan-900/20 text-cyan-700 dark:text-cyan-300 rounded-full text-xs font-medium border border-cyan-200 dark:border-cyan-800">
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        
+                        {/* Outcome / Impact */}
+                        {project.outcome && (
+                          <div>
+                            <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Outcome / Impact</h4>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                              {project.outcome}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>
@@ -746,7 +744,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <div className="pt-16">
+      <div>
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
