@@ -20,6 +20,10 @@ export const metadata = {
   description: 'Building civic technology for open, data-driven communities. COO at Open Knowledge Nepal.',
   keywords: 'civic tech, open data, Nepal, technology, transparency, governance',
   authors: [{ name: 'James Shrestha' }],
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'James Shrestha - Civic Tech Engineer',
     description: 'Building civic technology for open, data-driven communities',
